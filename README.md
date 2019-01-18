@@ -19,3 +19,8 @@ o
 node dist/
 ```
 
+Si por ejemplo se borrar algún archivo y se quiere recuperar se ejecuta el siguiente comando:
+git checkout -- .
+
+
+
