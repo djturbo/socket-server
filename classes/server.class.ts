@@ -5,6 +5,7 @@ import http from 'http';
 import { Http2Server } from 'http2';
 
 import * as sockets from '../sockets';
+import { User } from '../model/indes';
 
 
 export default class Server {
@@ -37,12 +38,13 @@ export default class Server {
 
 
     private _listenSockets() {
-        console.log('listening conections - sockets');
 
         this.io.on('connection', client => {
-            console.log('client connected: ');
+            console.log('client connected: ', client.id);
+            sockets.connectClient(client, this.io);
             sockets.disconnect(client);
             sockets.message(client, this.io);
+            sockets.join(client, this.io);
         });
     }
 }

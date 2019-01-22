@@ -44,3 +44,20 @@ En esta sección 4, ya comenzaremos a trabajar con sockets, estos son parte de l
     
 
 
+# Sección 5
+
+En esta sección 5 trabajaremos en los siguientes temas:
+
+Rutas en Angular
+
+Manejo e identificación del ID del socket con un usuario
+
+Manejar usuarios en el backend
+
+Mantener el nombre de usuario en reconexiones
+
+Guards en Angular
+
+Recibir mensajes privados
+
+Enviar mensajes a todos los usuarios conectados mediante un servicio REST.
