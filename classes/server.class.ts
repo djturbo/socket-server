@@ -42,9 +42,10 @@ export default class Server {
         this.io.on('connection', client => {
             console.log('client connected: ', client.id);
             sockets.connectClient(client, this.io);
-            sockets.disconnect(client);
+            sockets.disconnect(client, this.io);
             sockets.message(client, this.io);
             sockets.join(client, this.io);
+            sockets.getUsers(client, this.io);
         });
     }
 }

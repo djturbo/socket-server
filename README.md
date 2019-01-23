@@ -61,3 +61,18 @@ Guards en Angular
 Recibir mensajes privados
 
 Enviar mensajes a todos los usuarios conectados mediante un servicio REST.
+
+# Sección 6, Clase 49
+
+En esta sección 6 tocaremos temas como:
+
+    Obtener todos los IDs de los usuarios conectados mediante servicios REST
+
+    Obtener nombres, sala y IDs de los usuarios conectados a servicios REST
+
+    Mostrar los usuarios en nuestra aplicación de Angular
+
+    Realizar un cierre de sesión del usuario conectado por sockets.
+
+La sección es corta pero muy ilustrativa, y nos ayudará a comprender formas de trabajar con nuestro servidor de socket en servicios REST
+

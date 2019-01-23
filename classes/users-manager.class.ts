@@ -7,7 +7,7 @@ export class UsersManager {
 
     public addUser(user: User) {
         this._list.push(user);
-        console.log('usuario agreagado a lalista: ', user);
+        console.log('usuario agreagado a la lista: ', user);
         return user;
     }
 
@@ -15,14 +15,13 @@ export class UsersManager {
         const user = this._list.find(u => u.id === id);
         if ( user ) {
             user.username = username;
-            console.log('user was updated ', user);
         }
         
         return user;
     }
 
     public get list(): User[] {
-        return this._list;
+        return this._list.filter(user => user.username !== '' && user.username !== 'unknown');
     }
 
     public getUser (id: string) {

@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import Server from '../classes/server.class';
-
+import { usersManager } from '../sockets/'
 const router = Router();
 
 router.get('/messages', (req: Request, res: Response) => {
@@ -53,6 +53,30 @@ router.post('/messages/:id', (req: Request, res: Response) => {
         message,
         from
     })
+});
+// Usuarios
+router.get('/users', (req: Request, res: Response) => {
+    const server = Server.instance;
+    server.io.clients( (err: any, clients: string[]) => {
+        if ( err ) {
+            res.json({
+                ok: false,
+                err
+            });
+        }
+        res.json({
+            ok: true,
+            clients
+        });
+    } )
+});
+
+router.get('/users/detail', (req: Request, res: Response) => {
+    usersManager
+    res.json({
+        ok: true,
+        clients: usersManager.list
+    });
 });
 
 export default router;
